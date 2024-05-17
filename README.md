@@ -12,6 +12,7 @@ board based on Cortex-M33 with the `thumbv8m.main-none-eabihf` ISA, with 1MB Fla
 ## Examples
 
 - `cargo embed --example rtt` - build, flash and open the rtt [debugger/monitor](https://probe.rs/docs/tools/cargo-embed/)
+- `cargo embed --example embassy` - [embassy](https://embassy.dev/) demo with 2 concurent tasks, blinking 2 LEDs
 
 ## VS Code settings
 
