@@ -6,3 +6,4 @@ board based on Cortex-M33 with the `thumbv8m.main-none-eabihf` ISA, with 1MB Fla
 ## Preparation
 
 - [`rustup`](https://rustup.rs/) - is recommended to install rust and its components
+- `cargo install cargo-binutils` - for `cargo size` and `cargo objdump -- --disassemble`, etc…
