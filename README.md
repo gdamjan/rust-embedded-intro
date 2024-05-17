@@ -7,3 +7,11 @@ board based on Cortex-M33 with the `thumbv8m.main-none-eabihf` ISA, with 1MB Fla
 
 - [`rustup`](https://rustup.rs/) - is recommended to install rust and its components
 - `cargo install cargo-binutils` - for `cargo size` and `cargo objdump -- --disassemble`, etc…
+
+## VS Code settings
+
+The repo will also suggest common extensions for VS Code:
+- [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- [crates helper](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates)
+
+and some settings to instruct rust-analyzer to only run for the `thumbv8m.main-none-eabihf` target.
