@@ -3,6 +3,8 @@
 Using the [`nrf8340-dk`](https://www.nordicsemi.com/Products/Development-hardware/nrf5340-dk)
 board based on Cortex-M33 with the `thumbv8m.main-none-eabihf` ISA, with 1MB Flash and 256K RAM.
 
+![nRF5340-DK](https://github.com/gdamjan/rust-embedded-intro/assets/81654/a3cbe0e1-5f82-40d7-b5aa-fc6759a978c5)
+
 ## Preparation
 
 - [`rustup`](https://rustup.rs/) - is recommended to install rust and its components
