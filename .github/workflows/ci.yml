@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo install cargo-binutils
+
+      - run: cargo build
+      - run: cargo size
+
+      - run: cargo build --example rtt
+      - run: cargo size --example rtt
+
+      - run: cargo build --example embassy
+      - run: cargo size --example embassy
+
+      - name: Annotate commit with clippy warnings
+        uses: giraffate/clippy-action@v1
