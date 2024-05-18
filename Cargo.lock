@@ -709,6 +709,7 @@ dependencies = [
  "embassy-executor",
  "embassy-nrf",
  "embassy-time",
+ "nrf5340-app-pac",
  "panic-halt",
  "panic-probe",
  "rtt-target",
