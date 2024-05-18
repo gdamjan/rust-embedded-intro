@@ -21,3 +21,17 @@ The repo will also suggest common extensions for VS Code:
 - [crates helper](https://marketplace.visualstudio.com/items?itemName=serayuzgur.crates)
 
 and some settings to instruct rust-analyzer to only run for the `thumbv8m.main-none-eabihf` target.
+
+## Infrastructure files
+
+Apart from the rust source code files, the following files are involved in the build and debug process:
+
+- `Cargo.toml`, `Cargo.lock` - [Cargo is the Rust package manager](https://doc.rust-lang.org/cargo/index.html).
+  Dependencies are specified here.
+- `rust-toolchain.toml` - [rustup overrides](https://rust-lang.github.io/rustup/overrides.html).
+  Make sure we use `stable` rust, and have the `thumbv8m.main-none-eabihf` target, and the `llvm-tools` component.
+- `memory.x` - the [memory layout](https://docs.rs/cortex-m-rt/latest/cortex_m_rt/#memoryx) of the nRF5340/Cortex-M33 core.
+- [`.cargo/config.toml`](https://doc.rust-lang.org/cargo/reference/config.html) - this sets the default build target (`thumbv8m.main-none-eabihf`).
+- [`build.rs`](https://doc.rust-lang.org/cargo/reference/build-scripts.html) - linker flags, track changes to memory.x.
+- `Embed.toml` - [cargo-embed](https://probe.rs/docs/tools/cargo-embed/#configuration) config file. Specifies the chip,
+  and enables rtt.
